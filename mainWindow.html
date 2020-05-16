@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head lang="pl">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title translate-label='label-app-title'> - </title>
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">-->
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body> 
+    <div class='header'>
+        <div class='dd' > <!--dd - dropdown -->
+            <button class='ddbutton' translate-label ='label-menu'> - </button>
+            <ul class='dropdown-content'>
+                <li>
+                    <label for='start-page-check' translate-label='label_marks_list'> - </label>
+                </li>
+                <li>
+                    <label for='page-two-check' translate-label='label_presence_list'> - </label>
+                </li>
+                <li>
+                    <label for='page-three-check' translate-label='label_information_list'> - </label>
+                </li>
+                <li>
+                    <label for ='page-four-check' translate-label='label_schedule'> - </label>
+                </li>
+                <li>
+                    <label for ='page-five-check' translate-label='label_notes'> - </label>
+                </li>
+                <li>
+                    <label for ='page-six-check' translate-label='label_schedule_class'> - </label>
+                </li>
+            </ul>
+        </div>
+        <div class='titles-wrapper'>
+            <div class='page-title active' translate-label='label_marks_list' data-title-for='start-page-check'>-</div>
+            <div class='page-title' translate-label='label_presence_list' data-title-for='page-two-check'>-</div>
+            <div class='page-title' translate-label='label_information_list' data-title-for='page-three-check'>-</div>
+            <div class='page-title' translate-label='label_schedule' data-title-for='page-four-check'>-</div>
+            <div class='page-title' translate-label='label_notes' data-title-for='page-five-check'>-</div>
+            <div class='page-title' translate-label='label_schedule_class' data-title-for='page-six-check'>-</div>
+        </div>
+        <select class='switcher' id='language-switcher'>
+            <option value='pl'>PL</option>
+            <option value='ua'>UA</option>
+        </select>
+    </div>   
+    <input id="start-page-check" class='page-check-radio' name='page-check-radio' checked='checked'  type="radio" />      <!-- START PAGE (LISTA OCEN) -->
+    <div id='start-page' class='page'>
+        <div class='page-header text-right'>          
+            <div class='header-right-column'>
+                <input type="text" id='header' placeholder="Nazwa przedmiotu" translate-label='label-subject-name' class='titleInput'>
+                
+            </div>
+        </div>
+        <div class='page-content-wrapper'>
+            <div class='one-page-wrapper active'>       
+                <table class='students'>
+                    <tr class='row'>
+                        <th width="15%" translate-label='label_students_table' style="border-bottom-color: lightsteelblue;"></th><th colspan="15" translate-label='label_date_lessons'>-</th>
+                    </tr>
+                    <tr class='dates-row'>
+                        <td class='blue-th'><input type="text" placeholder="Klasa" class='input_class' translate-label='label-class'></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class='add-button-wrapper' >
+            <div clas='wrapper-add-page'><button class='addNewPage' id="addStart" translate-label='label-new-page'> - </button></div>
+            <div class='wrapper-add-student'><button class='addStudent' translate-label='label-add-student'> - </button></div>        
+        </div>
+        <div class='pagination-wrapper hide'>
+            <div class='pagination'>
+                <ul>
+                    <li class='page-link active' data-page-number='1'>1</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <input id="page-two-check"  class='page-check-radio' name='page-check-radio' type="radio" />                 <!--PAGE TWO (LISTA OBECNOSCI) -->
+    <div id='page-two' class='page'> 
+        <div class='page-header'>                                                           
+            <div class='header-right-column' >
+                <input type="text" placeholder="Nazwa przedmiotu" class='titleInput' translate-label='label-subject-name'>
+            </div>
+        </div>
+        <div class='page-content-wrapper'>
+            <div class='one-page-wrapper active'> 
+                <table class='students'>
+                    <tr class='row'>
+                        <th width="15%" translate-label='label_students_table' style="border-bottom-color: lightsteelblue;">-</th><th colspan="15" translate-label='label_date_lessons'>-</th>
+                    </tr>
+                    <tr class='dates-row'>
+                        <td class='blue-th'><input type="text" placeholder="Klasa" class='input_class' translate-label='label-class'></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                        <td class='date-field-wrapper'><label><input type="text" class='input_date'></label></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class='add-button-wrapper'>
+            <div clas='wrapper-add-page'><button class='addNewPage' id="addTwo" translate-label='label-new-page'> - </button></div>
+            <div class='wrapper-add-student'><button class='addStudent' translate-label='label-add-student'> - </button></div>              
+        </div>  
+        <div class='pagination-wrapper hide'>
+            <div class='pagination'>
+                <ul>
+                    <li class='page-link active' data-page-number='1'>1</li>
+                </ul>
+            </div>
+        </div>   
+    </div>
+    <input id="page-three-check" class='page-check-radio' name='page-check-radio' type="radio" />                          <!-- PAGE THREE (INFORMACJA O UCZNIACH-->
+    <div id='page-three' class='page'>                                                                   
+        <div class='page-header'>
+            <div class='header-right-column'>
+                <input type="text" placeholder="Klasa" class='titleInput-class' translate-label='label-class'>
+            </div>
+        </div>
+        <div class='page-content-wrapper'>
+            <div class='one-page-wrapper active'> 
+                <table class='studentsdata'>
+                    <tr class='row'>
+                        <th rowspan="2" width="15%" translate-label='label_students_table'> - </th><th colspan="5" translate-label='label-person-data'>-</th>
+                    </tr>
+                    <tr class='data-row'>
+                        <th><label translate-label='label-unique-code'> - </label></th>
+                        <th><label translate-label='label-birth-date'> - </label></th>
+                        <th><label translate-label='label-parents-name'> - </label></th>
+                        <th><label translate-label='label-phone-numbers'> - </label></th>
+                        <th><label translate-label='label-parents-job'> - </label></th>          
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class='add-button-wrapper'>
+            <div clas='wrapper-add-page'><button class='addNewPage' id="addThree" translate-label='label-new-page'> - </button></div>
+            <div class='wrapper-add-student'><button id="addStudentData" class='addStudentData' translate-label='label-add-student'> - </button></div>
+        </div> 
+        <div class='pagination-wrapper hide'>
+            <div class='pagination'>
+                <ul>
+                    <li class='page-link active' data-page-number='1'>1</li>
+                </ul>
+            </div>
+        </div>   
+    </div>
+    <input id='page-four-check' class='page-check-radio' name='page-check-radio' type='radio' />                            <!-- PAGE FOUR (PODZIAL GODZIN) -->
+    <div id='page-four' class='page'>
+        <div class='page-header'>
+             <div class='header-right-column'>
+                <label class='header-schedule' translate-label='label_schedule'> - </label>
+            </div>
+        </div>
+        <div id='lessons-table-wrapper' >
+            <div class='lessons-table active'>
+                <table>
+                    <tr>
+                        <th translate-label='label-subject'> - </th>
+                        <th translate-label='label_date_lessons'> - </th>
+                        <th translate-label='label-from-time'> - </th>
+                        <th translate-label='label-to-time'> - </th>
+                    </tr>
+                    <tr class='schedule-row'>
+                        <td class='tdSub'><input class='subjectInput'></td>
+                        <td class='tdSub'><input class='dateInput'></td>
+                        <td class='tdGod'><input class='fromInput'></td>
+                        <td class='tdGod'><input class='toInput'></td>
+                    </tr>
+                    <tr class='schedule-row'>
+                        <td><input class='subjectInput'></td>
+                        <td><input class='dateInput'></td>
+                        <td><input class='fromInput'></td>
+                        <td><input class='toInput'></td>
+                    </tr>
+                    <tr class='schedule-row'>
+                        <td><input class='subjectInput'></td>
+                        <td><input class='dateInput'></td>
+                        <td><input class='fromInput'></td>
+                        <td><input class='toInput'></td>            
+                    </tr>
+                    <tr class='schedule-row'>
+                        <td><input class='subjectInput'></td>
+                        <td><input class='dateInput'></td>
+                        <td><input class='fromInput'></td>
+                        <td><input class='toInput'></td>
+                    </tr>
+                    <tr class='schedule-row'>
+                        <td><input class='subjectInput'></td>
+                        <td><input class='dateInput'></td>
+                        <td><input class='fromInput'></td>
+                        <td><input class='toInput'></td>
+                    </tr>
+                    <tr class='schedule-row'>
+                        <td><input class='subjectInput'></td>
+                        <td><input class='dateInput'></td>
+                        <td><input class='fromInput'></td>
+                        <td><input class='toInput'></td>
+                    </tr>
+                    <tr class='schedule-row'>
+                        <td><input class='subjectInput'></td>
+                        <td><input class='dateInput'></td>
+                        <td><input class='fromInput'></td>
+                        <td><input class='toInput'></td>
+                    </tr>
+                    <tr class='schedule-row'>
+                        <td><input class='subjectInput'></td>
+                        <td><input class='dateInput'></td>
+                        <td><input class='fromInput'></td>
+                        <td><input class='toInput'></td>
+                    </tr>
+                    <tr class='schedule-row'>
+                        <td><input class='subjectInput'></td>
+                        <td><input class='dateInput'></td>
+                        <td><input class='fromInput'></td>
+                        <td><input class='toInput'></td>
+                    </tr>
+                    <tr class='schedule-row'>
+                        <td><input class='subjectInput'></td>
+                        <td><input class='dateInput'></td>
+                        <td><input class='fromInput'></td>
+                        <td><input class='toInput'></td>
+                    </tr>
+                </table>  
+            </div>       
+        </div>
+        <div class='add-button-wrapper'>
+            <div class='wrapper-add-student'>
+                <button class='prev' id="previousButton" translate-label='label-previous'> -- </button>
+                <button class='prev' id="nextButton" translate-label='label-next'> -- </button>
+            </div>
+        </div>
+    </div>
+    <input id='page-five-check' class='page-check-radio' name='page-check-radio' type='radio' />                            <!-- PAGE FIVE (Notatniki )-->
+    <div id='page-five' class='page'>
+        <div class='page-header'>
+            <div class='header-right-column' >
+                <label class='header-schedule' translate-label='label-notatniki'> -- </label>       
+                <button class='plus' id='plus' > + </button>
+            </div>
+        </div>     
+    </div> 
+    <input id='page-six-check' class='page-check-radio' name='page-check-radio' type='radio' />                            <!-- PAGE SIX (PODZIAL)-->
+    <div id='page-six' class='page'>
+        <div class='page-header'>
+             <div class='header-right-column' >
+                <label class='header-schedule' translate-label='label_schedule_class'> -- </label>
+            </div>
+        </div>
+        <div class='tableWrapper'>
+            <table class='scheduleTable'>
+                <tr class='row'>
+                    <th colspan='10'><input class='input_th' placeholder='Wpisz datę' translate-label='label-write-date'/></th>
+                </tr>
+                <tr class='row'>
+                    <th colspan='2' translate-label='label-mon'></th> 
+                        
+                    <th colspan='2' translate-label='label-tue'></th> 
+               
+                    <th colspan='2' translate-label='label-wen'></th> 
+               
+                    <th colspan='2' translate-label='label-thu'></th> 
+              
+                    <th colspan='2' translate-label='label-fri'></th> 
+               </tr>
+                <tr>
+                    <th translate-label='label-subject'> - </th><th translate-label='label-teacher'> - </th>
+                    <th translate-label='label-subject'> - </th><th translate-label='label-teacher'> - </th>
+                    <th translate-label='label-subject'> - </th><th translate-label='label-teacher'> - </th>
+                    <th translate-label='label-subject'> - </th><th translate-label='label-teacher'> - </th>
+                    <th translate-label='label-subject'> - </th><th translate-label='label-teacher'> - </th>
+                </tr>
+                <tr class='schedule-class-row'>
+                    <td class="mon"><input type="text" class='inputSubjectClass'></td>
+                    <td class="mon"><input type="text" class='inputTeacherClass'></td>
+                    <td class="tue"><input type="text" class='inputSubjectClass'></td>
+                    <td class="tue"><input type="text" class='inputTeacherClass'></td>
+                    <td class="wed"><input type="text" class='inputSubjectClass'></td>
+                    <td class="wed"><input type="text" class='inputTeacherClass'></td>
+                    <td class="thu"><input type="text" class='inputSubjectClass'></td>
+                    <td class="thu"><input type="text" class='inputTeacherClass'></td>
+                    <td class="fri"><input type="text" class='inputSubjectClass'></td>
+                    <td class="fri"><input type="text" class='inputTeacherClass'></td>
+                </tr>
+                <tr class='schedule-class-row'>
+                    <td class="mon"><input type="text" class='inputSubjectClass'></td>
+                    <td class="mon"><input type="text" class='inputTeacherClass'></td>
+                    <td class="tue"><input type="text" class='inputSubjectClass'></td>
+                    <td class="tue"><input type="text" class='inputTeacherClass'></td>
+                    <td class="wed"><input type="text" class='inputSubjectClass'></td>
+                    <td class="wed"><input type="text" class='inputTeacherClass'></td>
+                    <td class="thu"><input type="text" class='inputSubjectClass'></td>
+                    <td class="thu"><input type="text" class='inputTeacherClass'></td>
+                    <td class="fri"><input type="text" class='inputSubjectClass'></td>
+                    <td class="fri"><input type="text" class='inputTeacherClass'></td>
+                </tr>
+                <tr class='schedule-class-row'>
+                    <td class="mon"><input type="text" class='inputSubjectClass'></td>
+                    <td class="mon"><input type="text" class='inputTeacherClass'></td>
+                    <td class="tue"><input type="text" class='inputSubjectClass'></td>
+                    <td class="tue"><input type="text" class='inputTeacherClass'></td>
+                    <td class="wed"><input type="text" class='inputSubjectClass'></td>
+                    <td class="wed"><input type="text" class='inputTeacherClass'></td>
+                    <td class="thu"><input type="text" class='inputSubjectClass'></td>
+                    <td class="thu"><input type="text" class='inputTeacherClass'></td>
+                    <td class="fri"><input type="text" class='inputSubjectClass'></td>
+                    <td class="fri"><input type="text" class='inputTeacherClass'></td>
+                </tr>
+                <tr class='schedule-class-row'>
+                    <td class="mon"><input type="text" class='inputSubjectClass'></td>
+                    <td class="mon"><input type="text" class='inputTeacherClass'></td>
+                    <td class="tue"><input type="text" class='inputSubjectClass'></td>
+                    <td class="tue"><input type="text" class='inputTeacherClass'></td>
+                    <td class="wed"><input type="text" class='inputSubjectClass'></td>
+                    <td class="wed"><input type="text" class='inputTeacherClass'></td>
+                    <td class="thu"><input type="text" class='inputSubjectClass'></td>
+                    <td class="thu"><input type="text" class='inputTeacherClass'></td>
+                    <td class="fri"><input type="text" class='inputSubjectClass'></td>
+                    <td class="fri"><input type="text" class='inputTeacherClass'></td> 
+                </tr>
+                <tr class='schedule-class-row'>
+                    <td class="mon"><input type="text" class='inputSubjectClass'></td>
+                    <td class="mon"><input type="text" class='inputTeacherClass'></td>
+                    <td class="tue"><input type="text" class='inputSubjectClass'></td>
+                    <td class="tue"><input type="text" class='inputTeacherClass'></td>
+                    <td class="wed"><input type="text" class='inputSubjectClass'></td>
+                    <td class="wed"><input type="text" class='inputTeacherClass'></td>
+                    <td class="thu"><input type="text" class='inputSubjectClass'></td>
+                    <td class="thu"><input type="text" class='inputTeacherClass'></td>
+                    <td class="fri"><input type="text" class='inputSubjectClass'></td>
+                    <td class="fri"><input type="text" class='inputTeacherClass'></td>
+                </tr>
+                <tr class='schedule-class-row'>
+                    <td class="mon"><input type="text" class='inputSubjectClass'></td>
+                    <td class="mon"><input type="text" class='inputTeacherClass'></td>
+                    <td class="tue"><input type="text" class='inputSubjectClass'></td>
+                    <td class="tue"><input type="text" class='inputTeacherClass'></td>
+                    <td class="wed"><input type="text" class='inputSubjectClass'></td>
+                    <td class="wed"><input type="text" class='inputTeacherClass'></td>
+                    <td class="thu"><input type="text" class='inputSubjectClass'></td>
+                    <td class="thu"><input type="text" class='inputTeacherClass'></td>
+                    <td class="fri"><input type="text" class='inputSubjectClass'></td>
+                    <td class="fri"><input type="text" class='inputTeacherClass'></td>
+                </tr>
+                <tr class='schedule-class-row'>
+                    <td class="mon"><input type="text" class='inputSubjectClass'></td>
+                    <td class="mon"><input type="text" class='inputTeacherClass'></td>
+                    <td class="tue"><input type="text" class='inputSubjectClass'></td>
+                    <td class="tue"><input type="text" class='inputTeacherClass'></td>
+                    <td class="wed"><input type="text" class='inputSubjectClass'></td>
+                    <td class="wed"><input type="text" class='inputTeacherClass'></td>
+                    <td class="thu"><input type="text" class='inputSubjectClass'></td>
+                    <td class="thu"><input type="text" class='inputTeacherClass'></td>
+                    <td class="fri"><input type="text" class='inputSubjectClass'></td>
+                    <td class="fri"><input type="text" class='inputTeacherClass'></td>
+                </tr>
+                <tr class='schedule-class-row'>
+                    <td class="mon"><input type="text" class='inputSubjectClass'></td>
+                    <td class="mon"><input type="text" class='inputTeacherClass'></td>
+                    <td class="tue"><input type="text" class='inputSubjectClass'></td>
+                    <td class="tue"><input type="text" class='inputTeacherClass'></td>
+                    <td class="wed"><input type="text" class='inputSubjectClass'></td>
+                    <td class="wed"><input type="text" class='inputTeacherClass'></td>
+                    <td class="thu"><input type="text" class='inputSubjectClass'></td>
+                    <td class="thu"><input type="text" class='inputTeacherClass'></td>
+                    <td class="fri"><input type="text" class='inputSubjectClass'></td>
+                    <td class="fri"><input type="text" class='inputTeacherClass'></td>
+                </tr>
+            </table>
+        </div>         
+        <div class='add-button-wrapper'>
+            <button id="NewWeek" class='addWeek' translate-label='label-add-week'> - </button>
+        </div>       
+    </div>                                                                                                     
+    </div>                                                                                                                     
+    <script src="main.js"></script>
+    <!--<script src="//rezitech.github.com/stash/stash.min.js"></script>-->
+</body>
+</html>
