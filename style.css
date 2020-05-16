@@ -1,0 +1,578 @@
+body {
+  background-color: mintcream;
+  box-sizing: border-box;
+}
+
+.dd {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+}
+/* dropdown button*/
+.ddbutton{
+  background-color: lightsteelblue;
+  border-color:  lightsteelblue;
+  border-style: outset;
+  border-width: thin;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 60px;
+  height: 35px;
+  margin-left: 10px;
+  text-align: center;
+  padding: 1px;
+  font-size: 1.2em ;
+  font-family: Times New Roman;
+  font-style: italic; 
+  color: black;
+  margin: 22px 20px;
+  outline: none;  
+}
+
+.div:hover .ddbutton {
+  background-color: #779fcf;
+}
+
+.switcher{
+  float: right;
+  background-color: lightsteelblue;
+  margin: 22px 20px;
+  height: 35px;
+  width: 60px;
+  border-color:  lightsteelblue;
+  border-style: outset;
+  border-width: thin;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  list-style: none;
+  background-color: dimgrey;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  bottom: 0;
+  left: 20px;
+  top: calc(100% - 22px);
+  z-index: 1;
+}
+
+li{
+  background-color: lightsteelblue;
+}
+/* links in the dropdown*/
+.dropdown-content label {
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.1em;
+  font-style: italic;
+  cursor: pointer;
+}
+
+/* change color of links*/
+.dropdown-content label:hover {
+  background-color: #95b5db 
+}
+
+/*show dd menu on hover*/
+.dd:hover .dropdown-content{
+  display: block;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dd:hover .ddbutton {
+  background-color: #95b5db;
+}
+
+.titles-wrapper {
+  display: inline-block;
+  text-align: center;
+  width: calc(100% - 200px);
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: -155px;
+}
+.page-title {
+  display: none;
+}
+
+.page-title.active {
+  display: block; 
+}
+.page-check-radio {
+  display: none;
+}
+
+.page-check-radio:checked + .page {
+  display: block;
+}
+
+.page {
+  display: none;
+}
+
+.page-header {
+  background: #dddddd ; 
+  border: black solid thin; 
+  height: 80px;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.header-right-column {
+  display: block;
+  text-align: center;
+}
+
+.titleInput {
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+  width: 400px;
+  height: 35px;
+  background-color: #dddddd;
+  border: none;
+  font-style: italic;
+  font-size: xx-large;
+  outline: none;
+}
+
+.titleInput-class {
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+  width: 400px;
+  height: 35px;
+  background-color: #dddddd;
+  border: none;
+  font-style: italic;
+  font-size: xx-large;
+  outline: none;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px black solid;
+}
+
+.students {
+  margin-bottom: 15px;
+}
+
+th {
+  text-align: center;
+  border: 1px solid black;
+  background-color: lightsteelblue;
+  height: 35px;
+  font-size: 1.4em ;
+  font-style: italic;
+  color: black;
+}
+
+.blue-th {
+  background-color: lightsteelblue;
+  text-align: center;
+} 
+
+.input_class {
+  display: inline-block;
+  background-color: lightsteelblue;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4em;
+  font-style: italic;
+  font-family: Times New Roman;
+  width: 125px;
+  height: 30px;
+  outline: none;
+}
+
+.input_class:hover {
+  background-color: #dddddd;
+}
+td {
+  border: 1px solid black;
+  text-align: left;
+  padding: 1px;
+  height: 35px;
+  width: 100px;
+  background-color: #dddddd;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  height: 35px;
+}
+
+/*.mainTD {
+  width: 220px;
+  height: 30px;
+}*/
+
+.input_date {
+  font-family: Times New Roman;
+  text-align: center;
+  font-size: 1.4em;
+  height: 35px;
+  width: 110px;
+  background-color: #dddddd;
+  border: none;
+  outline: none;
+}
+
+.wrapper-add-student {
+  width: 90%;
+  text-align: center;
+}
+
+.addStudent {
+  background-color: #dddddd;
+  border-color: #c5c4c4;
+  border-width: thin;
+  border-radius: 10px;
+  border-style: hidden;
+  font-family: Times New Roman;
+  font-size: 0.9em;
+  color: black;
+  width: 110px;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 3px #999;
+  cursor: pointer;
+}
+
+.addStudent:hover{
+  background-color: #c5c4c4;
+}
+
+.input_ocena{
+  border: none;
+  background-color: #dddddd;
+  text-align: center;
+  font-family: Times New Roman;
+  font-size: 1.4em;
+  height: 35px;
+  width: 110px;
+  outline: none;
+}
+
+.add-button-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.wrapper-add-page {
+  width: 10%;
+  float: left;
+}
+
+.addNewPage {
+  background-color: #dddddd;
+  border-color: #c5c4c4;
+  border-style: hidden;
+  border-width: thin;
+  border-radius: 10px;
+  font-family: Times New Roman;
+  font-size: 0.9em;
+  float: left;
+  width: 100px;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 3px #999;
+  cursor: pointer;
+}
+
+.addNewPage:hover {
+  background-color: #c5c4c4;
+}
+
+/*     PAGINATION     */
+
+.pagination {
+  display: inline-block; 
+}
+
+.pagination li {
+  background: mintcream;
+  color: black;
+  float: left;
+  list-style: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 2px solid lightsteelblue;
+  margin: 0 4px;
+}
+
+.pagination li.active {
+  background-color: lightsteelblue;
+  color: black;
+  border: 2px solid lightsteelblue;
+}
+
+.pagination li:hover:not(active) { 
+  background-color: lightsteelblue;
+  border: 2px solid lightsteelblue;
+  cursor: default;
+}
+
+.one-page-wrapper {
+  display: none;
+}
+.one-page-wrapper.active {
+  display: block;
+}
+page-link.active {
+  pointer-events: none;
+  text-decoration: underline;
+}
+.hide {
+  display: none;
+}
+
+.template {
+  display: none;
+}
+/*       END  OF PAGINATION     */
+
+
+.studentName-edit {
+  outline: none;
+  height: 35px;
+  border: none;
+  font-size: 1em;
+  width: 280px;
+  background-color: #dddddd;
+}
+
+.input-data{
+  text-align: center;
+  font-family: Times New Roman;
+  font-size: 1.4em;
+  border:none;
+  background-color: #dddddd;     
+  height: 35px;
+  width: 336px;
+  outline: none;  
+}
+
+.addStudentData {
+  background-color: #dddddd;
+  border-color: #c5c4c4;
+  border-width: thin;
+  border-radius: 10px;
+  border-style: hidden;
+  font-family: Times New Roman;
+  font-size: 0.9em;
+  color: black;
+  width: 110px;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 3px #999;
+  cursor: pointer;
+}
+
+.addStudentData:hover {
+  background-color: #c5c4c4;
+}
+
+.header-schedule {
+  display: inline-block;
+  font-size: xx-large; 
+  font-style: italic;
+  color: dimgrey;
+  text-align: center;
+  margin-top: 20px;
+  width: 400px;
+}
+
+.schedule { 
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+/*.lessons-table {
+  overflow-x: auto;
+}*/
+
+.tdSub {
+  width: 45%;
+}
+
+.subjectInput{
+  font-family: Times New Roman;
+  font-size: 1.4em;
+  width: 800px;
+  height: 35px;
+  background-color: #dddddd;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+.dateInput {
+  font-family: Times New Roman;
+  font-size: 1.4em;
+  width: 800px;
+  height: 35px;
+  background-color: #dddddd;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+.fromInput{
+  width: inherit;
+  height: 35px;
+  background-color: #dddddd;
+  border: none;
+  font-family: Times New Roman;
+  font-size: 1.6em;
+  text-align: center;
+  outline: none;
+}
+
+.toInput{
+  width: inherit;
+  height: 35px;
+  background-color: #dddddd;
+  font-family: Times New Roman;
+  font-size: 1.6em;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+
+.lessons-table {
+  display: none;
+}
+
+.lessons-table.active {
+ display: block;
+}
+
+.prev {
+  background-color: #dddddd;
+  border-color: #c5c4c4;
+  border-width: thin;
+  border-radius: 10px;
+  border-style: hidden;
+  font-family: Times New Roman;
+  font-size: 0.9em;
+  color: black;
+  width: 110px;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 3px #999;
+  cursor: pointer;
+}
+
+.prev:hover {
+  background-color: #c5c4c4;
+}
+
+.note{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 4px 12px;
+  width: 95%;
+  white-space: pre;
+  border: none;
+  font-style: italic;
+  font-family: Times New Roman;
+  font-size: 1.3em;
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196F3;
+  resize: none;
+  outline: none;
+
+}
+
+.plus {
+  background-color: lightsteelblue;
+  border-color: lightsteelblue;
+  border-style: outset;
+  border-width: thin;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 60px;
+  height: 35px;
+  margin-left: 10px;
+  text-align: center;
+  color: black;
+  float: right;
+  margin: 22px 20px;
+  outline: none; 
+  font-size: 1.5em ;
+}
+
+.plus:hover {
+  background-color: #779fcf;
+}
+
+.tableWrapper {
+  display: block;  
+  overflow-x: auto;
+  }
+
+.scheduleTable {
+  margin-bottom: 20px; 
+  width: auto;
+}
+
+.input_th{
+  width: 780px;
+  font-size: medium;
+  background-color: lightsteelblue;
+  border: none;
+  text-align: center;
+  cursor: default;
+  outline: none;
+}
+
+.inputSubjectClass{
+  background-color: #dddddd;
+  text-align: center;
+  font-family: Times New Roman;
+  font-size: 1.4em;
+  border: none;
+  width: 200px;
+  height: 35px;
+  outline: none;
+}
+
+.inputTeacherClass {
+  background-color: #dddddd;
+  text-align: center;
+  font-family: Times New Roman;
+  font-size: 1.4em;
+  border: none;
+  width: 200px;
+  height: 35px;
+  outline: none;
+}
+
+.addWeek{
+  background-color: #dddddd;
+  border-color: #c5c4c4;
+  border-width: thin;
+  border-radius: 10px;
+  border-style: hidden;
+  font-family: Times New Roman;
+  font-size: 0.9em;
+  color: black;
+  width: 110px;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 3px #999;
+  cursor: pointer;
+}
+
+.addWeek:hover{
+  background-color: #d3d3d3;  
+}
